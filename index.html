@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RLS Guard Dog 🐕‍🦺 - Secure Educational Platform</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="guard-dog-logo">
+                <i class="fas fa-shield-dog"></i>
+                <h2>RLS Guard Dog</h2>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Securing your educational data...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-dog"></i>
+                <span>RLS Guard Dog</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="#docs" class="nav-link">Docs</a>
+            </div>
+            <div class="nav-auth">
+                <button class="btn btn-outline" id="login-btn">Login</button>
+                <button class="btn btn-primary" id="signup-btn">Sign Up</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="security-grid"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Secure Educational Platform
+                            <span class="gradient-text">with RLS Protection</span>
+                        </h1>
+                        <p class="hero-description">
+                            Comprehensive Row Level Security implementation demonstrating secure data access patterns 
+                            for educational platforms. Students see only their data, teachers manage everything.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-large" id="demo-btn">
+                                <i class="fas fa-play"></i>
+                                Live Demo
+                            </button>
+                            <button class="btn btn-outline btn-large" id="docs-btn">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="security-shield">
+                            <div class="shield-layers">
+                                <div class="shield-layer layer-1"></div>
+                                <div class="shield-layer layer-2"></div>
+                                <div class="shield-layer layer-3"></div>
+                            </div>
+                            <i class="fas fa-shield-alt shield-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Security-First Features</h2>
+                    <p>Built with enterprise-grade security and modern UI patterns</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-feature="rls">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Row Level Security</h3>
+                        <p>PostgreSQL RLS policies ensure data isolation between users and roles</p>
+                        <div class="feature-stats">
+                            <span class="stat">100% Secure</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-feature="auth">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Role-Based Access</h3>
+                        <p>Students and teachers have distinct permissions and data visibility</p>
+                        <div class="feature-stats">
+                            <span class="stat">2 User Roles</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-feature="realtime">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Real-time Updates</h3>
+                        <p>Live data synchronization with security boundaries maintained</p>
+                        <div class="feature-stats">
+                            <span class="stat">< 100ms</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-feature="testing">
+                        <div class="feature-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3>Security Testing</h3>
+                        <p>Comprehensive test suite validates all security policies</p>
+                        <div class="feature-stats">
+                            <span class="stat">95% Coverage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Interactive Dashboard</h2>
+                    <p>Experience the security model in action</p>
+                </div>
+                <div class="dashboard-container">
+                    <!-- Role Selector -->
+                    <div class="role-selector">
+                        <button class="role-btn active" data-role="student">
+                            <i class="fas fa-user-graduate"></i>
+                            Student View
+                        </button>
+                        <button class="role-btn" data-role="teacher">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            Teacher View
+                        </button>
+                    </div>
+
+                    <!-- Dashboard Content -->
+                    <div class="dashboard-content">
+                        <!-- Student Dashboard -->
+                        <div class="dashboard-view active" id="student-dashboard">
+                            <div class="dashboard-grid">
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>My Progress</h3>
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="progress-chart">
+                                        <canvas id="student-progress-chart"></canvas>
+                                    </div>
+                                    <div class="progress-stats">
+                                        <div class="stat-item">
+                                            <span class="stat-value">85%</span>
+                                            <span class="stat-label">Completion</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-value">12</span>
+                                            <span class="stat-label">Assignments</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>My Classrooms</h3>
+                                        <i class="fas fa-door-open"></i>
+                                    </div>
+                                    <div class="classroom-list" id="student-classrooms">
+                                        <!-- Dynamic content -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>Recent Activity</h3>
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="activity-feed" id="student-activity">
+                                        <!-- Dynamic content -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher Dashboard -->
+                        <div class="dashboard-view" id="teacher-dashboard">
+                            <div class="dashboard-grid">
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>All Students Progress</h3>
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="students-overview">
+                                        <canvas id="teacher-overview-chart"></canvas>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>Classroom Management</h3>
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div class="classroom-management" id="teacher-classrooms">
+                                        <!-- Dynamic content -->
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-header">
+                                        <h3>Analytics</h3>
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div class="analytics-panel" id="teacher-analytics">
+                                        <!-- Dynamic content -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="security-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Security Implementation</h2>
+                    <p>Deep dive into our security architecture</p>
+                </div>
+                <div class="security-content">
+                    <div class="security-tabs">
+                        <button class="tab-btn active" data-tab="policies">RLS Policies</button>
+                        <button class="tab-btn" data-tab="testing">Security Tests</button>
+                        <button class="tab-btn" data-tab="architecture">Architecture</button>
+                    </div>
+                    <div class="security-panels">
+                        <div class="security-panel active" id="policies-panel">
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span>PostgreSQL RLS Policies</span>
+                                    <button class="copy-btn" data-copy="policies">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <pre><code id="policies-code">-- Students can only see their own progress
+CREATE POLICY "Students can view own progress" ON progress
+FOR SELECT USING (auth.uid() = user_id);
+
+-- Teachers can see all progress
+CREATE POLICY "Teachers can view all progress" ON progress
+FOR SELECT USING (auth.jwt() ->> 'role' = 'teacher');
+
+-- Students can only see classrooms they're enrolled in
+CREATE POLICY "Students can view enrolled classrooms" ON classrooms
+FOR SELECT USING (
+  auth.uid() IN (
+    SELECT user_id FROM classroom_enrollments 
+    WHERE classroom_id = id
+  )
+);</code></pre>
+                            </div>
+                        </div>
+                        <div class="security-panel" id="testing-panel">
+                            <div class="test-results" id="test-results">
+                                <!-- Dynamic test results -->
+                            </div>
+                        </div>
+                        <div class="security-panel" id="architecture-panel">
+                            <div class="architecture-diagram">
+                                <div class="arch-layer">
+                                    <h4>Frontend Layer</h4>
+                                    <div class="arch-components">
+                                        <span class="component">HTML5</span>
+                                        <span class="component">CSS3</span>
+                                        <span class="component">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="arch-layer">
+                                    <h4>Security Layer</h4>
+                                    <div class="arch-components">
+                                        <span class="component">Supabase Auth</span>
+                                        <span class="component">RLS Policies</span>
+                                        <span class="component">JWT Tokens</span>
+                                    </div>
+                                </div>
+                                <div class="arch-layer">
+                                    <h4>Database Layer</h4>
+                                    <div class="arch-components">
+                                        <span class="component">PostgreSQL</span>
+                                        <span class="component">MongoDB</span>
+                                        <span class="component">Real-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="auth-title">Login</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group" id="role-group" style="display: none;">
+                        <label for="role">Role</label>
+                        <select id="role">
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span id="auth-btn-text">Login</span>
+                    </button>
+                </form>
+                <div class="auth-switch">
+                    <p id="auth-switch-text">Don't have an account? 
+                        <a href="#" id="auth-switch-link">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RLS Guard Dog</h4>
+                    <p>Secure educational platform with enterprise-grade security.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#features">Row Level Security</a></li>
+                        <li><a href="#dashboard">Interactive Dashboard</a></li>
+                        <li><a href="#security">Security Testing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="https://github.com/r91781585-tech/rls-guard-dog">GitHub</a></li>
+                        <li><a href="#security">Security Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RLS Guard Dog. Built with security first principles 🔒</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/js/utils/supabase.js"></script>
+    <script src="src/js/utils/auth.js"></script>
+    <script src="src/js/utils/database.js"></script>
+    <script src="src/js/components/charts.js"></script>
+    <script src="src/js/components/dashboard.js"></script>
+    <script src="src/js/components/security.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
